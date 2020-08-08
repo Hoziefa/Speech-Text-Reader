@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "CANON";
+  src: url(../fonts/CANON.ttf);
+}
+
+:root {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-user-select: none;
+  font-size: 1rem;
+  font-family: "Proxima Nova", "Montserrat";
+  -webkit-font-smoothing: antialiased;
+}
+
+body::-webkit-scrollbar {
+  width: 0.45rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: darksalmon;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 3vmax;
+}
+
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  color: gray;
+  line-height: 1.6;
+  font-family: "Helvetica Neue WGL", "Helvetica Neue";
+}
+
+p::first-letter {
+  text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+button,
+select,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  color: #bec6cc, #444451;
+  text-transform: capitalize;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+hr {
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 3px;
+}
+
+@media (max-width: 600px) {
+  hr {
+    height: 3px !important;
+  }
+}
+
+:focus {
+  outline: none !important;
+}
+
+.container {
+  width: 1170px;
+  width: 92%;
+  width: 90vw;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 476px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+body {
+  background-color: #ffefea;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px darksalmon, -2px -2px 5px darksalmon;
+  margin-bottom: 3rem;
+}
+
+.container {
+  padding: 1rem;
+  width: 96vw;
+}
+
+.btn {
+  background-color: darksalmon;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.15rem;
+  border-radius: 3px;
+}
+
+.btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.btn-toggle {
+  display: block;
+  margin: 0 auto;
+}
+
+.text-box {
+  width: 70%;
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(51, 51, 51, 0.795);
+  color: white;
+  padding: 1.85rem 1.2rem;
+  border-radius: 5px;
+  z-index: 10;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-transition: top 1s ease-in-out;
+  transition: top 1s ease-in-out;
+}
+
+.text-box.show {
+  top: 30%;
+}
+
+.text-box > *:not(button):not(.close) {
+  margin-bottom: 1rem;
+}
+
+.text-box .close {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+}
+
+.text-box .close i {
+  font-size: 2rem;
+  color: darksalmon;
+  pointer-events: none;
+}
+
+.text-box h3 {
+  font-size: 2.5rem;
+  font-family: "Canon", sans-serif;
+  color: darksalmon;
+}
+
+.text-box select {
+  background-color: darksalmon;
+  width: 100%;
+  height: 30px;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.text-box select option {
+  font-weight: inherit;
+}
+
+.text-box textarea {
+  border: 3px solid #dadada;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: darksalmon;
+  color: inherit;
+  width: 50%;
+  height: 10em;
+  font-size: 1.15rem;
+  font-weight: bold;
+  font-family: inherit;
+  text-shadow: 2px 2px 0 gray;
+}
+
+.text-box textarea::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.text-box button {
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.text-box button:hover {
+  background-color: white;
+  color: darksalmon;
+}
+
+main {
+  padding: 5rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+main .box {
+  height: 400px;
+  background-color: darksalmon;
+  color: white;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s ease-out;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s ease-out;
+  transition: transform 0.3s, box-shadow 0.3s ease-out;
+  transition: transform 0.3s, box-shadow 0.3s ease-out, -webkit-transform 0.3s, -webkit-box-shadow 0.3s ease-out;
+}
+
+main .box.active {
+  -webkit-box-shadow: 0 0 10px 5px darksalmon;
+          box-shadow: 0 0 10px 5px darksalmon;
+}
+
+main .box:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main .box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 30%;
+     object-position: center 30%;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 80%;
+  max-height: 100%;
+}
+
+main .box p {
+  color: inherit;
+  text-align: center;
+  margin-top: 6%;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=style.css.map */
